@@ -12,7 +12,6 @@ import {
   Switch
 } from "react-router-dom";
 import { registerNav } from "../modules/Navigation";
-import { createBrowserHistory } from "history";
 import PageNotFound from "../views/PageNotFound";
 import HomeRoutes from "./HomeRoutes";
 import PrivateRoutes from "./PrivateRoutes";
@@ -38,7 +37,6 @@ class Routes extends Component {
   }
 
   render() {
-    const browserHistory = createBrowserHistory();
 
     return (
       <div>

@@ -47,6 +47,8 @@ router.post('/signin', function (req, res, next) {
       })
       return next(err)
     }
+  console.log("creating user..........");
+
     User.createUser(newUser, function (err, user) {
       if (err) return next(err);
       res.json({ message: 'user created' })

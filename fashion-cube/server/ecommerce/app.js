@@ -1,7 +1,6 @@
 var createError = require('http-errors');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser')
 var logger = require('morgan');
 var express = require('express');
 var mongoose = require('mongoose');
@@ -15,6 +14,12 @@ mongoose.connect(mongoConfig, console.log(`Connected to mongoDB`)).catch(`MongoD
 
 var app = express()
 app.use(cors())
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:3000'); // Replace with your client's origin
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); 
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization'); 
+  next();
+});
 
 // Express validator
 app.use(expressValidator({
@@ -38,8 +43,8 @@ app.use(expressValidator({
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 //set static dir
