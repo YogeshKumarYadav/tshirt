@@ -36,6 +36,15 @@ module.exports.getUserByEmail = function (email, callback) {
     var query = { email: email };
     User.findOne(query, callback);
 }
+// module.exports.getUserByEmail = async function (email) {
+//     try {
+//       const user = await User.findOne({ email }); 
+//       return user;
+//     } catch (error) {
+//       console.error("Error in getUserByEmail:", error);
+//       return null; 
+//     }
+//   };
 
 
 module.exports.getUserById = function (id, callback) {
