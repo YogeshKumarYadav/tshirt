@@ -1,0 +1,23 @@
+.navbar {
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+.nav-container {
+    display: flex;
+    width: calc(100% - 40px);
+}
+
+.nav-logo-container {
+    flex: 1;
+    text-align: left;
+}
+
+.nav-options-container{
+    display: flex;
+    gap: 24px
+}
+
+.nav-user-section{
+    flex: 1;
+}
