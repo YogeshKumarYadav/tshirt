@@ -7,17 +7,19 @@ const Navbar = () => {
     return (
         <section className="nav-container">
             <div className='nav-logo-container'>Logo here</div>
-            <div className='nav-options-container'>
-                <div>Option 1</div>
-                <div>Option 2</div>
-                <div>Option 3</div>
-                <div>Option 4</div>
-            </div>
+            <ul className='nav-menu'>
+                <li className='nav-menu-item'> Option 1 <icons.Expand/>
+                </li> 
+                <li className='nav-menu-item'> Option 2 <icons.Expand/>
+                </li>
+                <li className='nav-menu-item'> Option 3 <icons.Expand/>
+                </li>
+            </ul>
             <div className='nav-user-section'>
-                <icons.Search/>
-                <icons.User/>
                 <icons.Bag/>
-            </div>
+                <icons.User/>
+                <icons.Search/>
+                </div>
         </section>
     );
 };
