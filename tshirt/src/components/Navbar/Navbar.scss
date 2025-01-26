@@ -1,11 +1,10 @@
-.navbar {
-    margin-top: 25px;
-    margin-bottom: 0px;
-}
-
 .nav-container {
     display: flex;
-    width: calc(100% - 40px);
+    width: 90%;
+    position: fixed;
+    z-index: 10;
+    color: whitesmoke;
+    fill: whitesmoke;
 }
 
 .nav-logo-container {
@@ -19,5 +18,9 @@
 }
 
 .nav-user-section{
+    margin-left: auto;
+    display: flex;
+    flex-direction: row-reverse;
     flex: 1;
+    gap: 24px;
 }
